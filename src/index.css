@@ -25,7 +25,7 @@
     display: inline-block;
     width: 114px;
     height: 114px;
-    background: url("../imgs/chrome.png") no-repeat center;
+    background: url("chrome.png") no-repeat center;
     cursor: pointer;
 }
 .bf-description{
