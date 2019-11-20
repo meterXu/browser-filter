@@ -21,7 +21,7 @@ function browerFilter(options) {
                                             '<a href="'+url+'"  class="bf-imgIcon" download="'+downloadName+'"></a>' +
                                         '</div>' +
                                         '<p class="bf-description">' +
-                                        '您的页面似乎有兼容性问题，点击图标下载最新版Chrome'+
+                                        '您的页面似乎有兼容性问题，点击图标下载最新版Chrome！'+
                                         '</p>' +
                                     '</div>' +
                                  '</div>';
