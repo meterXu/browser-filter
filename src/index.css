@@ -1,0 +1,17 @@
+.bf-monlayer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    background: rgb(0, 0, 0);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000,endColorstr=#b2000000);
+}
+.bf-dialog{
+    width: 600px;
+    height: 300px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 300px;
+}

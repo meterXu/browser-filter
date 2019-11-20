@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="src/index.css">
     <script src="src/index.js"></script>
+    <script>
+        window.onload=function () {
+            new browerFilter({
+                ie:{
+                    min:11,
+                    newVerUrl:'http://www.baidu.com'
+                },
+                chrome:{
+                    min:79,
+                    newVerUrl: 'http://www.baidu.com'
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 </body>
