@@ -5,7 +5,6 @@
     bottom: 0;
     right: 0;
     background: rgba(0,0,0,0.7);
-    background: rgb(0, 0, 0);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000,endColorstr=#b2000000);
 }
 .bf-dialog{
