@@ -7,10 +7,33 @@
     background: rgba(0,0,0,0.7);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000,endColorstr=#b2000000);
 }
-.bf-dialog{
+.bf-container{
+    margin: 0 auto;
+    margin-top: 300px;
     width: 600px;
     height: 300px;
     background: #fff;
-    margin: 0 auto;
-    margin-top: 300px;
+    border-radius: 10px;
+    border: 1px #0a0a0a solid;
+    box-shadow: 1px 1px 9px #3a3a3a, -1px -1px 9px #3a3a3a, 1px -1px 9px #3a3a3a, -1px 1px 9px #3a3a3a;
+}
+.bf-dialog{
+    padding: 40px;
+}
+.bf-imgContainer{
+    text-align: center;
+}
+.bf-imgIcon{
+    display: inline-block;
+    width: 114px;
+    height: 114px;
+    background-size: contain;
+    background: url("../imgs/chrome.png") no-repeat center;
+    cursor: pointer;
+}
+.bf-description{
+    font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol";
+    text-align: center;
+    color: #4a4a4a;
+    margin-top: 30px;
 }

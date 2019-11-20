@@ -8,16 +8,14 @@
     <script>
         window.onload=function () {
             new browerFilter({
-                ie:{
-                    min:11,
-                    newVerUrl:'http://www.baidu.com'
+                filter:{
+                    ie:11,
+                    chrome:79
                 },
-                chrome:{
-                    min:79,
-                    newVerUrl: 'http://www.baidu.com'
-                }
+                newVerUrl: 'http://www.baidu.com',
+                downloadName:'chrome.exe'
             });
-        }
+        };
     </script>
 </head>
 <body>

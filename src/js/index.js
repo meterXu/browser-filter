@@ -12,23 +12,43 @@ function browerFilter(options) {
                             : (s = ua.match(/version\/([\d\.]+).*safari/)) ? sys = {browser: 'safari', ver: s[1]} : 0
         return sys;
     }
-    function createMongolianLayer(){
+    function createMongolianLayer(url,downloadName){
         var mongolianLayer = document.createElement('div');
-        var dialog = document.createElement('div');
-        dialog.className='bf-dialog';
-        mongolianLayer.appendChild(dialog);
         mongolianLayer.className='bf-monlayer';
+        mongolianLayer.innerHTML='<div class="bf-container">' +
+                                    '<div class="bf-dialog">' +
+                                        '<div class="bf-imgContainer">' +
+                                            '<a href="'+url+'" target="_blank" class="bf-imgIcon" download="'+downloadName+'"></a>' +
+                                        '</div>' +
+                                        '<p class="bf-description">' +
+                                        '您的页面似乎有兼容性问题'+'<br/>'+'点击图标下载最新浏览器'+
+                                        '</p>' +
+                                    '</div>' +
+                                 '</div>';
         document.getElementsByTagName('body')[0].appendChild(mongolianLayer);
     }
 
     function init(options){
+        var _options={
+            filter:{
+                ie:8,
+                chrome:65
+            },
+            newVerUrl: 'javascript:;',
+            downloadName:''
+        };
+        if(options&&options.filter&&options.newVerUrl&&options.downloadName){
+            _options=options;
+        }else{
+            console.warn('参数错误',options);
+        }
         var browerInfo = getBrowerInfo();
-        for(var key in options){
+        for(var key in _options.filter){
             if(key==browerInfo.browser){
                 if(browerInfo.ver){
                     var verByInt = parseInt(browerInfo.ver.substring(0,browerInfo.ver.indexOf('.')));
-                    if(!isNaN(verByInt)&&verByInt<options[key].min){
-                        createMongolianLayer();
+                    if(!isNaN(verByInt) && verByInt < _options.filter[key]){
+                        createMongolianLayer(_options.newVerUrl,_options.downloadName);
                         return false;
                     }
                 }
