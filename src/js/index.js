@@ -18,10 +18,10 @@ function browerFilter(options) {
         mongolianLayer.innerHTML='<div class="bf-container">' +
                                     '<div class="bf-dialog">' +
                                         '<div class="bf-imgContainer">' +
-                                            '<a href="'+url+'" target="_blank" class="bf-imgIcon" download="'+downloadName+'"></a>' +
+                                            '<a href="'+url+'"  class="bf-imgIcon" download="'+downloadName+'"></a>' +
                                         '</div>' +
                                         '<p class="bf-description">' +
-                                        '您的页面似乎有兼容性问题'+'<br/>'+'点击图标下载最新浏览器'+
+                                        '您的页面似乎有兼容性问题，点击图标下载最新版Chrome'+
                                         '</p>' +
                                     '</div>' +
                                  '</div>';
@@ -31,30 +31,25 @@ function browerFilter(options) {
     function init(options){
         var _options={
             filter:{
-                ie:8,
                 chrome:65
             },
             newVerUrl: 'javascript:;',
             downloadName:''
         };
-        if(options&&options.filter&&options.newVerUrl&&options.downloadName){
-            _options=options;
-        }else{
-            console.warn('参数错误',options);
-        }
+        _options.filter=options.filter||_options.filter;
+        _options.newVerUrl=options.newVerUrl||_options.newVerUrl;
+        _options.downloadName=options.downloadName||_options.downloadName;
         var browerInfo = getBrowerInfo();
-        for(var key in _options.filter){
-            if(key==browerInfo.browser){
-                if(browerInfo.ver){
-                    var verByInt = parseInt(browerInfo.ver.substring(0,browerInfo.ver.indexOf('.')));
-                    if(!isNaN(verByInt) && verByInt < _options.filter[key]){
-                        createMongolianLayer(_options.newVerUrl,_options.downloadName);
-                        return false;
-                    }
+        if(_options.filter[browerInfo.browser]){
+            if(browerInfo.ver){
+                var verByInt = parseInt(browerInfo.ver.substring(0,browerInfo.ver.indexOf('.')));
+                if(!isNaN(verByInt) && verByInt < _options.filter[browerInfo.browser]){
+                    createMongolianLayer(_options.newVerUrl,_options.downloadName);
                 }
             }
+        }else{
+            createMongolianLayer(_options.newVerUrl,_options.downloadName);
         }
-
     }
     return init(options);
 }

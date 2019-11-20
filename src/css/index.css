@@ -1,24 +1,22 @@
 .bf-monlayer{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0,0,0,0.7);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000,endColorstr=#b2000000);
+    background: rgb(22, 26, 29);
 }
 .bf-container{
-    margin: 0 auto;
-    margin-top: 300px;
-    width: 600px;
-    height: 300px;
-    background: #fff;
+    margin: 200px auto;
+    width: 650px;
+    color: #fff;
+    background: #2d2d2d;
     border-radius: 10px;
-    border: 1px #0a0a0a solid;
-    box-shadow: 1px 1px 9px #3a3a3a, -1px -1px 9px #3a3a3a, 1px -1px 9px #3a3a3a, -1px 1px 9px #3a3a3a;
+    border: 1px #000;
+    box-shadow: 1px 1px 0px #545454, -1px -1px 0px #545454, 1px -1px 0px #545454, -1px 1px 0px #545454;
 }
 .bf-dialog{
-    padding: 40px;
+    padding: 55px;
 }
 .bf-imgContainer{
     text-align: center;
@@ -27,7 +25,6 @@
     display: inline-block;
     width: 114px;
     height: 114px;
-    background-size: contain;
     background: url("../imgs/chrome.png") no-repeat center;
     cursor: pointer;
 }
@@ -36,4 +33,8 @@
     text-align: center;
     color: #4a4a4a;
     margin-top: 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
 }
