@@ -1,5 +1,6 @@
 # browerFilter
 > 浏览器不兼容时，进行引导提示
+
 ![browerFilter](http://7u.isaacxu.com/browerFilter.PNG)
 ## 组件兼容性
 * ie>=8
