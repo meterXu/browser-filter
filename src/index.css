@@ -5,6 +5,7 @@
     bottom: 0;
     right: 0;
     background: rgb(22, 26, 29);
+    z-index: 999;
 }
 .bf-container{
     margin: 200px auto;
@@ -37,4 +38,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 1px;
+}
+img{
+    border:none;
 }
