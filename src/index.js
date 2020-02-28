@@ -12,16 +12,16 @@ function browerFilter(options) {
                             : (s = ua.match(/version\/([\d\.]+).*safari/)) ? sys = {browser: 'safari', ver: s[1]} : 0
         return sys;
     }
-    function createMongolianLayer(url,downloadName){
+    function createMongolianLayer(options){
         var mongolianLayer = document.createElement('div');
         mongolianLayer.className='bf-monlayer';
         mongolianLayer.innerHTML='<div class="bf-container">' +
                                     '<div class="bf-dialog">' +
                                         '<div class="bf-imgContainer">' +
-                                            '<a href="'+url+'"  class="bf-imgIcon" download="'+downloadName+'"></a>' +
+                                            '<a href="'+options.url+'"  class="bf-imgIcon '+options.class+'" download="'+options.downloadName+'"></a>' +
                                         '</div>' +
                                         '<p class="bf-description">' +
-                                        '您的页面似乎有兼容性问题，点击图标下载最新版Chrome！'+
+                                        options.title+
                                         '</p>' +
                                     '</div>' +
                                  '</div>';
@@ -31,12 +31,18 @@ function browerFilter(options) {
     function init(options){
         var _options={
             filter:{
-                chrome:65
+                chrome:65,
+                ie:10,
+                firefox:53
             },
-            newVerUrl: 'javascript:;',
-            downloadName:''
+            title:'您的页面似乎有兼容性问题，点击图标下载最新版Chrome！',
+            class:'',
+            newVerUrl: 'https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B8E74F7DE-458E-65DD-EC25-16AB30074375%7D%26lang%3Dzh-CN%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe',
+            downloadName:'ChromeSetup.exe'
         };
         _options.filter=options.filter||_options.filter;
+        _options.downloadName=options.title||_options.title;
+        _options.downloadName=options.class||_options.class;
         _options.newVerUrl=options.newVerUrl||_options.newVerUrl;
         _options.downloadName=options.downloadName||_options.downloadName;
         var browerInfo = getBrowerInfo();
@@ -44,7 +50,7 @@ function browerFilter(options) {
             if(browerInfo.ver){
                 var verByInt = parseInt(browerInfo.ver.substring(0,browerInfo.ver.indexOf('.')));
                 if(!isNaN(verByInt) && verByInt < _options.filter[browerInfo.browser]){
-                    createMongolianLayer(_options.newVerUrl,_options.downloadName);
+                    createMongolianLayer(_options);
                 }
             }
         }else{
