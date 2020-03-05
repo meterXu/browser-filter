@@ -18,7 +18,7 @@ function browerFilter(options) {
         mongolianLayer.innerHTML='<div class="bf-container">' +
                                     '<div class="bf-dialog">' +
                                         '<div class="bf-imgContainer">' +
-                                            '<a href="'+options.url+'"  class="bf-imgIcon '+options.class+'" download="'+options.downloadName+'"></a>' +
+                                            '<a href="'+options.newVerUrl+'"  class="bf-imgIcon '+options.class+'" download="'+options.downloadName+'"></a>' +
                                         '</div>' +
                                         '<p class="bf-description">' +
                                         options.title+
