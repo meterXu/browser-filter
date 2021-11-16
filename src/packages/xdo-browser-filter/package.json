@@ -1,6 +1,6 @@
 {
     "name": "xdo-browser-filter",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "浏览器兼容性校验组件",
     "main": "dist/index.js",
     "scripts": {

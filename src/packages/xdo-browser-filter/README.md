@@ -1,4 +1,4 @@
-# browser-filter
+# xdo-browser-filter
 > 浏览器兼容性校验组件
 
 ![browser-filter](http://7u.isaacxu.com/xdo-browser-filter-1.PNG)
