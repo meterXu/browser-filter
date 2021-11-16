@@ -1,9 +1,0 @@
-{
-  "name": "browerFilter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
-  "author": "meter<xuhonggang@hotmail.com>",
-  "license": "MIT",
-  "dependencies": {}
-}
