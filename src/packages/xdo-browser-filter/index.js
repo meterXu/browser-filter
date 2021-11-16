@@ -11,6 +11,14 @@ function getBrowserInfo(){
                     : (s = ua.match(/(?:opera|opr).([\d\\.]+)/)) ? sys = {browser: 'opera', version: s[1]}
                         : (s = ua.match(/chrome\/([\d\\.]+)/)) ? sys = {browser: 'chrome', version: s[1]}
                             : (s = ua.match(/version\/([\d\\.]+).*safari/)) ? sys = {browser: 'safari', version: s[1]} : 0
+    let verInt = sys.version.match(/\d+/g);
+    if(verInt){
+        try{
+            sys.version = parseInt(verInt[0])
+        }catch (e){
+            sys.version = 0
+        }
+    }
     return sys;
 }
 

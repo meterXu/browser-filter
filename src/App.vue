@@ -10,12 +10,19 @@ export default {
   name: 'App',
   components: {
   },
-  created() {
+  mounted() {
+    let that = this
     xdoBrowserFilter({
       filter:{
-        chrome:100,
+        chrome:65,
         ie:10,
         firefox:53
+      },
+      action:function (res){
+        that.$message({
+          message: '页面有兼容性问题！',
+          type: 'warning'
+        })
       }
     })
   }
