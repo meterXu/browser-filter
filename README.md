@@ -1,7 +1,10 @@
 # browser-filter
-> 浏览器兼容性校验工具
+> 浏览器兼容性校验组件
 
-![browser-filter](http://7u.isaacxu.com/brower.png)
+![browser-filter](http://7u.isaacxu.com/xdo-browser-filter-1.PNG)
+![browser-filter](http://7u.isaacxu.com/xdo-browser-filter-2.PNG)
+![browser-filter](http://7u.isaacxu.com/xdo-browser-filter-3.PNG)
+
 ## 组件兼容性
 * vue
 * react

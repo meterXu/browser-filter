@@ -1,5 +1,3 @@
-import './assets/index.css';
-
 function getBrowserInfo(){
     let sys = {};
     let ua = navigator.userAgent.toLowerCase();
@@ -29,7 +27,7 @@ function compare(browserInfo,operator,filter){
             case "<=":{
                 return browserInfo.version<=uv
             }break;
-            case "=":{
+            case "==":{
                 return uv==browserInfo.version
                 break;
             }
