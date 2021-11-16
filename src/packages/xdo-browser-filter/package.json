@@ -1,5 +1,5 @@
 {
-    "name": "xdo-brower-filter",
+    "name": "xdo-browser-filter",
     "version": "1.0.1",
     "description": "浏览器兼容性校验",
     "main": "dist/index.js",

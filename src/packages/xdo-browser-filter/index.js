@@ -1,5 +1,5 @@
 import './assets/index.css';
-function browerFilter(options) {
+function xdoBrowerFilter(options) {
     function getBrowerInfo(){
         let sys = {};
         let ua = navigator.userAgent.toLowerCase();
@@ -28,7 +28,6 @@ function browerFilter(options) {
                                  '</div>';
         document.getElementsByTagName('body')[0].appendChild(mongolianLayer);
     }
-
     function init(options){
         var _options={
             filter:{
@@ -63,7 +62,7 @@ function browerFilter(options) {
             return true
         }
     }
-    return init(options);
+    init(options);
 }
 
-export default browerFilter;
+export default xdoBrowerFilter;

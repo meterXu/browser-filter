@@ -26,7 +26,7 @@ export default [
     {
         input: './index.js',
         output: {
-            name: 'xdo-brower-filter',
+            name: 'xdo-browser-filter',
             file: `dist/xdo-brower-filter.umd.js`,
             format: 'umd'
         },
