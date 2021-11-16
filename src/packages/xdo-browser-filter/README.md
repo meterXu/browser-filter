@@ -32,8 +32,8 @@ xdoBrowserFilter({
     }
 })
 ```
-## API
-### options
+## 属性
+
 |  参数   | 类型  |  默认值  |  描述  |
 |  ----  | ----  | ----  | ----  |
 | filter  | Object | {} |限定兼容的浏览器版本，格式{browser:version}，browser可以使用ie,edge,firefox,opera,chrome,safari；version表示版本数值|
