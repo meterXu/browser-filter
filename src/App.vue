@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div style="width: 500px; margin: 80px auto 0 auto">
+    <div class="formContainer">
       <el-form ref="form" :model="form" label-width="80px">
         <el-form-item label="chrome">
           <el-input-number v-model="form.chrome"></el-input-number>
@@ -58,7 +58,6 @@
 
 <script>
 import xdoBrowserFilter from './packages/xdo-browser-filter/index.js'
-
 export default {
   name: 'App',
   components: {},
@@ -156,5 +155,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.formContainer{
+  width: 500px;
+  margin: 80px auto 0 auto;
+  text-align: left;
+}
+.el-form-item__content{
+  padding-left: 50px;
 }
 </style>
