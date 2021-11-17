@@ -7,7 +7,7 @@
     <script src="https://xenodochial-hermann-adb1af.netlify.app/xdo-brower-filter.umd.js"></script>
 ```
 * npm
-```html
+```bash
     npm i xdo-browser-filter
 ```
 ## 用法
@@ -103,6 +103,7 @@ xdoBrowserFilter.init({
 ```javascript
 import 'element-ui/lib/theme-chalk/index.css'
 import {Message} from 'element-ui'
+import xdoBrowserFilter from 'xdo-browser-filter'
 export default {
     mounted(){
         let that = this
@@ -129,6 +130,7 @@ export default {
 ```javascript
 import 'element-ui/lib/theme-chalk/index.css'
 import {Notification} from 'element-ui'
+import xdoBrowserFilter from 'xdo-browser-filter'
 export default {
     mounted(){
         let that = this
