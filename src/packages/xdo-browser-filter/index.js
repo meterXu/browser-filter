@@ -1,3 +1,4 @@
+import './assets/css/index.css'
 function getBrowserInfo(){
     let sys = {};
     let ua = navigator.userAgent.toLowerCase();
@@ -63,8 +64,30 @@ function validate(option){
     }
 }
 
-function xdoBrowserFilter(option) {
-    validate(option);
+function xdoBrowserFilter() {
+    this.init=function (option){
+        validate(option);
+    }
+    this.full=function (url){
+        let monlayers =  document.getElementsByClassName('xdo-bf-monlayer');
+        if(monlayers&&monlayers.length>0){
+            monlayers.forEach(el=>{
+                document.getElementsByTagName('body')[0].removeChild(el)
+            })
+        }
+        let mongolianLayer = document.createElement('div');
+        mongolianLayer.className='xdo-bf-monlayer';
+        mongolianLayer.innerHTML='<div class="xdo-bf-container">' +
+            '<div class="xdo-bf-dialog">' +
+            '<div class="xdo-bf-imgContainer">' +
+            '<a href="https://www.google.cn/chrome/" target="_blank"  class="xdo-bf-imgIcon"></a>' +
+            '</div>' +
+            '<p class="xdo-bf-description">您的页面似乎有兼容性问题，点击图标先下载兼容的浏览器！</p>' +
+            '</div>' +
+            '</div>';
+        document.getElementsByTagName('body')[0].appendChild(mongolianLayer);
+    }
+
 }
 
-export default xdoBrowserFilter;
+export default new xdoBrowserFilter();

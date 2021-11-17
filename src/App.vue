@@ -29,6 +29,7 @@
             <el-radio :label="1">消息提示</el-radio>
             <el-radio :label="2">弹框</el-radio>
             <el-radio :label="3">通知</el-radio>
+            <el-radio :label="4">全屏覆盖</el-radio>
           </el-radio-group>
         </el-form-item>
         <el-form-item>
@@ -91,7 +92,7 @@ export default {
   methods: {
     onSubmit() {
       let that = this
-      xdoBrowserFilter({
+      xdoBrowserFilter.init({
         filter: this.form,
         operator:this.form.operator,
         action: function (res) {
@@ -103,6 +104,16 @@ export default {
     showRes(type) {
       this.msg = this.filter ? '无兼容性问题！' : '页面有兼容性问题！'
       switch (type) {
+        case 4:{
+          if(this.filter){
+            this.$message({
+              message: this.msg,
+              type: 'success'
+            })
+          }else{
+            xdoBrowserFilter.full()
+          }
+        }break;
         case 3: {
           this.$notify({
             title: '通知',

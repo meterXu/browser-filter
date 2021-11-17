@@ -1,0 +1,45 @@
+.xdo-bf-monlayer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #161a1dd4;
+    z-index: 999;
+}
+.xdo-bf-container{
+    margin: 200px auto;
+    width: 650px;
+    color: #fff;
+    background: #2d2d2d;
+    border-radius: 10px;
+    border: 1px #000;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+.xdo-bf-dialog{
+    padding: 55px;
+}
+.xdo-bf-imgContainer{
+    text-align: center;
+}
+.xdo-bf-imgIcon{
+    display: inline-block;
+    width: 114px;
+    height: 114px;
+    background: url("../img/download.svg") no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+.xdo-bf-description{
+    font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol";
+    text-align: center;
+    color: #4a4a4a;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+.xdo-bf-img{
+    border:none;
+}
