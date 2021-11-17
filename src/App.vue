@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import xdoBrowserFilter from './packages/xdo-browser-filter/dist/index'
+import xdoBrowserFilter from './packages/xdo-browser-filter/index'
 export default {
   name: 'App',
   components: {},
