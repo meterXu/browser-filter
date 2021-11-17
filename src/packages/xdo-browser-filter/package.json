@@ -1,0 +1,33 @@
+{
+    "name": "xdo-browser-filter",
+    "version": "1.0.7",
+    "description": "浏览器兼容性校验组件",
+    "main": "dist/index.js",
+    "scripts": {
+      "build": "rollup -c",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "module": "dist/index.esm.js",
+    "keywords": [
+      "browser",
+      "js",
+      "compatibility"
+    ],
+    "private": false,
+    "author": "isaac",
+    "contributors": [
+      "isaac"
+    ],
+    "license": "MIT",
+    "dependencies": {
+    },
+    "devDependencies": {
+      "cssnano": "^5.0.10",
+      "postcss": "^8.2.9",
+      "rollup": "^2.44.0",
+      "rollup-plugin-commonjs": "^10.1.0",
+      "rollup-plugin-postcss": "^4.0.0",
+      "rollup-plugin-terser": "^7.0.2",
+      "rollup-plugin-url": "^3.0.1"
+    }
+  }
