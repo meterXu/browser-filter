@@ -19,6 +19,7 @@ xdoBrowserFilter.init({
     }
 })
 ```
-
+## 在线示例
+[在线示例](https://xenodochial-hermann-adb1af.netlify.app/)
 ## 组件使用
 [点我跳转](src/packages/xdo-browser-filter)
