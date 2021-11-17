@@ -1,13 +1,24 @@
 # browser-filter
-> 浏览器兼容性校验组件
+> 浏览器兼容性校验
 
-![browser-filter](http://7u.isaacxu.com/xdo-browser-filter-1.PNG)
-![browser-filter](http://7u.isaacxu.com/xdo-browser-filter-2.PNG)
-![browser-filter](http://7u.isaacxu.com/xdo-browser-filter-3.PNG)
+![xdo-browser-filter](http://7u.isaacxu.com/xdo-brower-filter.png)
 
-## 组件兼容性
-* vue
-* react
-* browser
+设置需要的浏览器版本，以规避在不兼容的浏览器上运行导致的不稳定情况。
+
+```javascript
+xdoBrowserFilter.init({
+    filter:{
+        chrome:65,
+        ie:10,
+        firefox:53
+    },
+    action:function(res){
+        if(!res){
+            xdoBrowserFilter.full()
+        }
+    }
+})
+```
+
 ## 组件使用
 [点我跳转](src/packages/xdo-browser-filter)

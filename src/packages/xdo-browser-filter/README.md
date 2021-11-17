@@ -4,7 +4,7 @@
 ## 安装
 * browser
 ```html
-    <script src="https://github.com/meterXu/browser-filter/blob/master/public/xdo-brower-filter.umd.js"></script>
+    <script src="https://xenodochial-hermann-adb1af.netlify.app/xdo-brower-filter.umd.js"></script>
 ```
 * npm
 ```html
