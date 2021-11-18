@@ -1,5 +1,5 @@
 # brower-filter
-> 浏览器不兼容校验。
+> 浏览器不兼容校验
 
 ![brower-filter](http://7u.isaacxu.com/brower.png)
 ## 组件兼容性
