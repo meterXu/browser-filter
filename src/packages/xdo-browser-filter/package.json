@@ -1,7 +1,7 @@
 {
-    "name": "xdo-brower-filter",
-    "version": "1.0.1",
-    "description": "浏览器兼容性校验",
+    "name": "xdo-browser-filter",
+    "version": "1.0.7",
+    "description": "浏览器兼容性校验组件",
     "main": "dist/index.js",
     "scripts": {
       "build": "rollup -c",
@@ -9,9 +9,9 @@
     },
     "module": "dist/index.esm.js",
     "keywords": [
-      "flowable",
-      "view",
-      "vue"
+      "browser",
+      "js",
+      "compatibility"
     ],
     "private": false,
     "author": "isaac",
