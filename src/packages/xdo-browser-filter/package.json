@@ -1,11 +1,11 @@
 {
   "name": "xdo-browser-filter",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "浏览器兼容性校验组件",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "server": "rollup -c -w",
+    "serve": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "module": "dist/index.esm.js",

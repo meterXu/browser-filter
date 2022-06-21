@@ -71,9 +71,11 @@ function xdoBrowserFilter() {
     this.full=function (text,url){
         let monlayers =  document.getElementsByClassName('xdo-bf-monlayer');
         if(monlayers&&monlayers.length>0){
-            monlayers.forEach(el=>{
-                document.getElementsByTagName('body')[0].removeChild(el)
-            })
+            for(let i = 0;i<monlayers.length;i++){
+                monlayers[i].forEach(el=>{
+                    document.getElementsByTagName('body')[0].removeChild(monlayers[i])
+                })
+            }
         }
         let myUrl = url||'https://www.google.cn/chrome/'
         let myText = text||'您的页面似乎有兼容性问题，点击图标先下载兼容的浏览器！'
