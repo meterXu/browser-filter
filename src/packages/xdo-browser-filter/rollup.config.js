@@ -5,19 +5,10 @@ import { terser } from 'rollup-plugin-terser'
 import cssnano from 'cssnano';
 import postcss from 'rollup-plugin-postcss'
 import babel from 'rollup-plugin-babel';
-import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
 function pgl() {
     return [
         babel({
             exclude: "node_modules/**"
-        }),
-        livereload(),
-        serve({
-            open: true, // 自动打开页面
-            port: 8000,
-            openPage: '/public/index.html', // 打开的页面
-            contentBase: ''
         }),
         cjs(),
         url({
