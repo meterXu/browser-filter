@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/xdo-brower-filter.umd.js"></script>
+</head>
+<body>
+<div>
+    hello world
+</div>
+<script>
+    window.onload=function (){
+        xdoBrowserFilter.init({
+            filter: {
+                chrome:65,
+                ie:10,
+                firefox:53
+            },
+            action:function(res){
+                if(!res){
+                    xdoBrowserFilter.full()
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>
